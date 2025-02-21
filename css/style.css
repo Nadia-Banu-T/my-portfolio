@@ -268,6 +268,7 @@ p.fade-in{
   color: #f4f3ef;
 }
 .experience-section {
+  
   margin: 0;
   padding: 50px 50px;
   font-family: 'Poppins', sans-serif;
@@ -282,17 +283,28 @@ p.fade-in{
 
 }
 
-.timeline ::after{
+.timeline::after{
   content: '';
   position: absolute;
   width: 6px;
   height: 100%;
   background: #ffffff;
   top: 0;
-  left: 100%;
-  margin-left: -3px;
-  z-index: -1;
+  left: 50%;
+  z-index: 999;
   animation: moveline 6s linear forwards; 
+}
+
+.left-flex{
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.right-flex{
+  display: flex;
+  justify-content: flex-end;
+
 }
 @keyframes moveline {
   0%{
@@ -304,7 +316,7 @@ p.fade-in{
 }
 .container{
   position: relative;
-  width: 40%;
+  width: 45%;
   animation: movedown 1s linear forwards;
   opacity: 0;
   color: #f4f3ef;
@@ -320,19 +332,19 @@ p.fade-in{
     transform: translateY(0px);
   }
 }
-.container:nth-child(1){
+#firstBox{
   animation-delay: 1s;
 }
-.container:nth-child(2){
+#secBox{
   animation-delay: 2s;
 }
-.container:nth-child(3){
+#thirdBox{
   animation-delay: 3s;
 }
-.container:nth-child(4){
+#fourthBox{
   animation-delay: 4s;
 }
-.container:nth-child(5){
+#fifthBox{
   animation-delay: 5s;
 }
 
@@ -432,4 +444,73 @@ p.fade-in{
     border-left: 0;
     left: 15px;
   }
+}
+
+/* Ensuring full-screen background video */
+.education-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background video full coverage */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay for better readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Centered Education Box with Glassmorphism */
+.education-container {
+  background: rgba(255, 255, 255, 0.15); /* Light white transparency */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  width: 50%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animating fade-in effect */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Styling text */
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-list li {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
