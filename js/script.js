@@ -61,3 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkScroll);
     checkScroll(); // Run on load in case it's already in view
 });
+
+function setActive(card) {
+    document.querySelectorAll('.testimonial-card').forEach(card => card.classList.remove('active'));
+    card.classList.add('active');
+}

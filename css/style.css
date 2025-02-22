@@ -582,3 +582,110 @@ p.fade-in{
     color: #bbb;
 }
 
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  padding: 60px 0;
+  background: #111;
+  color: white;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.skill-item {
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-item.big {
+  grid-column: span 2;
+  font-size: 22px;
+  padding: 25px;
+}
+
+.skill-item:hover {
+  background: #ffcc00;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+.skill-item:hover img {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/*Wall-of-Love*/
+.testimonial-container {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f5f5f5;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.testimonial-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: left;
+  min-width: 300px;
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.testimonial-card.active {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-weight: bold;
+  color: #0077b5;
+}
+.title {
+  font-size: 0.9rem;
+  color: #666;
+}
