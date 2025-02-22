@@ -527,7 +527,7 @@ p.fade-in{
     gap: 28px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 40px;
+    padding: 50px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -547,11 +547,11 @@ p.fade-in{
 .rank {
     font-size: 15rem;
     color: transparent;
-    font-family: fantasy;
+    font-family: 'Oswald', sans-serif;
     -webkit-text-stroke: 3px rgba(255, 255, 255, 0.5);
     flex-shrink: 0;
     width: 89px;
-    height: 200px;
+    height: 300px;
     text-align: center;
 }
 
