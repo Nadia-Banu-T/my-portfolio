@@ -1,3 +1,90 @@
+/*Html*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Nav-bar*/
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(0, 0, 0, 32%); 
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.logo {
+  font-size: 23px;
+  font-weight: 700;
+  color: #fffefc;
+  font-family: "montserrat";
+}
+.logo span {
+  color: rgb(239, 38, 38); 
+}
+.menu-toggle {
+  display: none;
+  font-family: "montserrat";
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "montserrat";
+    color: #ddd; 
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #fff8b3; 
+  }
+  
+  @media (max-width: 950px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: right; 
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background: #181818;
+      backdrop-filter: blur(10px);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+  }
+
+
 
 #hero {
     position: relative;
@@ -17,15 +104,25 @@
     color: white;
 }
 
-#h1{
+h1, h2{
+  font-family: "montserrat";
+    font-weight: 100;
+    
+}
+
+
+h1{
+    font-weight: 700;
     color: white;
 }
 
 .name-highlight span {
     color: white; 
-  }
+}
   
 p.fade-in{
+  font-family: "montserrat";
+    font-weight: 100;
     color: white;
 }
 
@@ -46,7 +143,7 @@ p.fade-in{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: RGB(22, 44, 58);
 }
 
 
@@ -60,8 +157,6 @@ p.fade-in{
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.2s ease-out forwards;
-    font-weight: bold;
-
 }
 
 @keyframes fadeInUp {
@@ -74,98 +169,12 @@ p.fade-in{
         transform: translateY(0);
     }
 }
-
-* {
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-  .navbar {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 24px;
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(12px);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-  
-
-  .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
-  }
-  
-  .logo span {
-    color: red; 
-  }
-  
+ 
 .fade-in span {
   color: red;
 }
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ddd; 
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #fff8b3; 
-  }
-  
-  .menu-toggle {
-    display: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: white;
-    }
-
-  @media (max-width: 950px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      align-items: center; 
-      position: absolute;
-      top: 50px;
-      right: 10px;
-      background: #181818;
-      backdrop-filter: blur(10px);
-      padding: 10px;
-      border-radius: 10px;
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-  }
-  
-  .buttons {
+ 
+.buttons {
     margin-top: 20px;
     display: flex;
     gap: 15px;
@@ -176,13 +185,14 @@ p.fade-in{
     font-size: 16px;
     font-weight: 600;
     border: none;
+    font-family: "montserrat";
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .download-cv {
-    background-color: #ff007f;
+    background-color: #EE9B00;
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -190,22 +200,22 @@ p.fade-in{
 }
 
 .download-cv:hover {
-    background-color: #e60073;
+    background-color: #CA6702;
 }
 
 .hire-me {
-    background-color: #00e5ff;
+    background-color: #0A9396;
     color: white;
 }
 
 .hire-me:hover {
-    background-color: #00b5cc;
+    background-color: #005F73;
 }
 
 /* about-me Section */
 .about-section {
-  background: #181818;
-  color: #fff;
+  background: #001219;
+  color:#fff;
   padding: 50px 50px 0px;
   position: relative;
   text-align: center;
@@ -213,8 +223,15 @@ p.fade-in{
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+.about-section h2{
+  font-weight: 700;
+  font-family: "montserrat";
+ color :  #E9D8A6;
+}
 .about-section p{
-  padding-top: 10px;
+  font-family: "montserrat";
+  color: #ffffff;
+  padding-top: 30px;
 }
 
 .about-section.visible {
@@ -230,7 +247,7 @@ p.fade-in{
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .stat-item {
@@ -239,41 +256,50 @@ p.fade-in{
 
 .stat-item h3 {
   font-size: 2.5rem;
-  color: #ff8a65;
+  color:#EE9B00;
   font-weight: bold;
 }
 
 .semi-circle {
   width: 150px;
   height: 75px;
-  background: #ff3b3b;
+  background:#0A9396;
   border-radius: 150px 150px 0 0;
-  margin: 50px auto 0;
+  margin: 25px auto 0;
 }
 
 
 
 /* Experience Section */
-
-
-
 .experience-section h2 {
   padding-top: 10px;
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color:  #ff3b3b;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #EE9B00;
 }
+
 .container h2{
-  color: #f4f3ef;
+  color:#ffffff;
+  font-weight: 500;
+  text-align: left;
 }
-.experience-section {
-  
+.speciifc-color{
+  color: white;
+  font-size: small;
+  line-height: 20px;
+}
+
+.container h3{
+  color:#E9D8A6;
+  font-weight: 500;
+}
+
+.experience-section {  
   margin: 0;
   padding: 50px 50px;
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
-  background:#322901;
+  background:#005f73;
 }
 
 .timeline{
@@ -288,10 +314,10 @@ p.fade-in{
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #ffffff;
-  top: 0;
+  background: #ee9b00;
+  border-radius: 50%;
   left: 50%;
-  z-index: 999;
+  top: 0;
   animation: moveline 6s linear forwards; 
 }
 
@@ -319,7 +345,8 @@ p.fade-in{
   width: 45%;
   animation: movedown 1s linear forwards;
   opacity: 0;
-  color: #f4f3ef;
+  color: #ffffff;
+  z-index: 10;
 }
 
 @keyframes movedown{
@@ -350,40 +377,36 @@ p.fade-in{
 
 .text-box{
   padding: 20px 30px;
-  background: #181818;
+  font-family: "montserrat";
+  background:  #001219;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
 }
 
-.left-container{
-  left: 5%;
-}
-
-.right-container{
-  left: 55%;
-}
-
 .container img{
-  position: absolute;
   width: 40px;
   border-radius: 50%;
-  right: -20px;
-  top: 32px;
-  z-index: 10;
+  background-color: #fff;
 }
 
-.right-container img{
-  left: -20px;
+.left-flex img{
+  position: absolute;
+  right: -17%;
+  top: 7%;
 }
 
-.text-box h2{
-  font-weight: 600;
+.right-flex img{
+  position: absolute;
+  left: -15.5%;
+  top: 7%;
 }
+
+
 
 .text-box small{
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .left-container-arrow{
@@ -394,7 +417,7 @@ p.fade-in{
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #181818;
+  border-left: 15px solid  #001219;
   right: -15px;
 }
 
@@ -406,7 +429,7 @@ p.fade-in{
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #181818;
+  border-right: 15px solid  #001219;
   left: -15px;
 }
 
@@ -440,7 +463,7 @@ p.fade-in{
     left: 10px;
   }
   .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid #fff;
+    border-right: 15px solid #001219;
     border-left: 0;
     left: 15px;
   }
@@ -689,3 +712,41 @@ p.fade-in{
   font-size: 0.9rem;
   color: #666;
 }
+
+/* Contact */
+.contact-section {
+        text-align: center;
+        padding: 50px 20px;
+        background: #f5f5f5;
+    }
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        max-width: 900px;
+        margin: auto;
+    }
+    .form-container {
+        flex: 1;
+        min-width: 400px;
+    }
+    .contact-links {
+        flex: 1;
+        text-align: left;
+    }
+    .contact-links h3 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .linkedin-link, .email-link {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: #0077b5;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .linkedin-link:hover, .email-link:hover {
+        text-decoration: underline;
+    }

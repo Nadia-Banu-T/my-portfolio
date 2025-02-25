@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const titles = ["Software Developer", "DevOps Engineer", "Automation Developer", "Social Media Manager", "Content Creator"];
     const textElement = document.getElementById("dynamic-text");
     let index = 0;
-    const colors = ["#ff007f", "#00e5ff", "#8a2be2", "#ffcc00", "#ff0000"]; // Cyberpunk colors
+    const colors = ["#ff007f", "#00e5ff", "#b5179e", "#ffcc00", "#ff0000"]; // Cyberpunk colors
     
     function glitchEffect(title) {
         let glitchText = title.split("");
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(glitchInterval);
             textElement.textContent = title;
             textElement.style.color = colors[index % colors.length]; // Apply neon color
-            textElement.style.textShadow = `0 0 5px ${colors[index % colors.length]}, 0 0 10px ${colors[index % colors.length]}`;
+            textElement.style.textShadow = `0 0 2px ${colors[index % colors.length]}, 0 0 2px ${colors[index % colors.length]}`;
             
             setTimeout(() => {
                 index = (index + 1) % titles.length;
