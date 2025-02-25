@@ -1,11 +1,39 @@
-// Animation while page loading
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".fade-in").forEach((el) => {
+     // Add animation delay to fade-in elements
+    document.querySelectorAll(".fade-in").forEach(el => {
         el.style.animationDelay = "0.5s";
     });
-});
+    // Close the menu when clicking outside
+    document.addEventListener("click", function (event) {
+        const nav = document.querySelector(".nav-links");
+        const toggle = document.querySelector(".menu-toggle");
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+            nav.classList.remove("active");
+        }
+    });
 
-// for hamburger/toggle menu effect
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    // Function to update active navbar link based on scroll position
+    function changeActiveNav() {
+        let currentSection = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 50) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+                link.classList.add("active");
+            }
+        });
+    }
+    // Attach scroll event to update active link
+    window.addEventListener("scroll", changeActiveNav);
+});
+ // Function to toggle the menu visibility
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
 }

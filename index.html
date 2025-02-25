@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Nadia Banu</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
         <div class="logo">NADIA<span>.</span></div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
         <nav class="nav-links">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About Me</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#wall-of-love">Wall of Love</a>
-          <a href="#contact">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
       
     <section id="hero">
-        <video autoplay loop muted playsinline class="bg-video">
-            <source src="assets/background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <img src="assets/background.gif" class="bg-video">
         <div class="overlay"></div>
         <div class="hero-content">
             <h2 class = "fade-in"> Hi There, I'm </h2>
@@ -37,7 +33,7 @@
             <p class="fade-in">Having Experience as <span id="dynamic-text"></span></p>
             <div class="buttons">
                 <a href="assets/Nadia_Banu_CV.pdf" download="Nadia_Banu_CV.pdf" class="btn download-cv">Download CV</a>
-                <button class="btn hire-me">Hire Me</button>
+                <a href="mailto:nadiabanu2562@gmail.com" class="btn hire-me">Hire Me</a>
             </div>
         </div>
     </section>
@@ -45,14 +41,14 @@
     <section id="about" class="about-section">
         <div class="about-container text-center">
             <h2>Hey there! I'm Nadia.</h2>
-            <p>Ever wish life had the same logical flow as code? Me too. While emotions make life messy, coding gives me a structured way to solve problems—logically, efficiently, and (hopefully) bug-free!</p>
+            <p>Ever wish life had the same logical flow as code? Me too. While emotions make life messy, coding gives me a way to solve problems—logically, efficiently, and (hopefully) bug-free!</p>
 
             <p>I'm a Software Developer, fascinated by web dev & Gen AI. I believe in delivering perfection, not just meeting deadlines. 
                 My tech stack? Python, AWS & Power Automate and UI path. (can't avoid DSA) </p>
 
-            <p>I approach problem-solving like an explorer: deep research first, execution second. And when I code, I start from the end-user’s perspective. After all, what’s the point of great code if no one finds it useful?</p>
+            <p>When I code, I start from the end-user’s perspective. After all, what’s the point of great code if no one finds it useful?</p>
 
-            <p>At the end of the day, I just want to see my work out in the real world, making life a little easier. If that sparks your curiosity, stick around—there’s more to come!</p>
+            <p>At the end of the day, I just want to see my work out in the real world, making life a little easier.</p>
 
             <div class="stats">
                 <div class="stat-item">
@@ -138,10 +134,7 @@
     </section> 
     
     <section id="education" class="education-section">          
-            <video autoplay loop muted playsinline class="bg-video">
-                <source src="assets/graduation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <img src="assets/graduation.gif" class="bg-video"">
             <div class="overlay"></div>
             <div class="education-content">
                 <h2 class="text-center">Education</h2>
@@ -273,7 +266,7 @@
         <h2 class="text-center">My Skills</h2>
         <div class="skills-grid">
             <div class="skill-item">
-                <img src="assets/icons/sql.svg" alt="SQL">
+                <img src="assets/icons/html.png" alt="SQL">
                 <span>HTML</span>
             </div>
             <div class="skill-item">
@@ -285,11 +278,11 @@
                 <span>Python</span>
             </div>
             <div class="skill-item">
-                <img src="assets/icons/java.svg" alt="Java">
+                <img src="assets/icons/sql.png" alt="Java">
                 <span>SQL</span>
             </div>
             <div class="skill-item">
-                <img src="assets/icons/csharp.svg" alt="C#">
+                <img src="assets/icons/data_analysis.png" alt="C#">
                 <span>Data Analysis</span>
             </div>
             <div class="skill-item big">
@@ -297,15 +290,15 @@
                 <span>DSA</span>
             </div>
             <div class="skill-item">
-                <img src="assets/icons/git.svg" alt="Git">
+                <img src="assets/icons/git.png" alt="Git">
                 <span>Git</span>
             </div>
             <div class="skill-item">
-                <img src="assets/icons/cpp.svg" alt="C++">
+                <img src="assets/icons/cpp.png" alt="C++">
                 <span>C++</span>
             </div>
             <div class="skill-item big">
-                <img src="assets/icons/aws.svg" alt="AWS">
+                <img src="assets/icons/aws.png" alt="AWS">
                 <span>AWS</span>
             </div>
             <div class="skill-item">
@@ -313,7 +306,7 @@
                 <span>UI Path</span>
             </div>
             <div class="skill-item big">
-                <img src="assets/icons/powerautomate.svg" alt="Power Automate">
+                <img src="assets/icons/pad.png" alt="Power Automate">
                 <span>Power Automate</span>
             </div>
             <div class="skill-item big">
@@ -321,14 +314,14 @@
                 <span>OOPS</span>
             </div>
             <div class="skill-item">
-                <img src="assets/icons/postgresql.svg" alt="PostgreSQL">
+                <img src="assets/icons/postgresql.png" alt="PostgreSQL">
                 <span>PostgreSQL</span>
             </div>
             
         </div>
     </section>
-    <section id="wall-of-love" class="testimonial-container">
-        <h2 class="section-title">Wall of Love 💙</h2>
+    <section id="testimonials" class="testimonial-container">
+        <h2 class="section-title">This is what my colleagues say about me 💙</h2>
         <div class="testimonial-wrapper">
             <div class="testimonial-card" onclick="setActive(this)">
                 <img src="profile1.jpg" alt="John" class="profile-pic">
