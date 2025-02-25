@@ -106,7 +106,7 @@
 
 h1, h2{
   font-family: "montserrat";
-    font-weight: 100;
+    font-weight: 500;
     
 }
 
@@ -122,7 +122,7 @@ h1{
   
 p.fade-in{
   font-family: "montserrat";
-    font-weight: 100;
+    font-weight: 500;
     color: white;
 }
 
@@ -263,7 +263,7 @@ p.fade-in{
 .semi-circle {
   width: 150px;
   height: 75px;
-  background:#0A9396;
+  background:#005f73;
   border-radius: 150px 150px 0 0;
   margin: 25px auto 0;
 }
@@ -309,16 +309,17 @@ p.fade-in{
 
 }
 
-.timeline::after{
+.timeline::after {
   content: '';
   position: absolute;
   width: 6px;
   height: 100%;
   background: #ee9b00;
-  border-radius: 50%;
   left: 50%;
+  transform: translateX(-50%);
   top: 0;
-  animation: moveline 6s linear forwards; 
+  border-radius: 50%;
+  animation: moveline 6s linear forwards;
 }
 
 .left-flex{
@@ -384,22 +385,19 @@ p.fade-in{
   font-size: 15px;
 }
 
-.container img{
+.container img {
   width: 40px;
   border-radius: 50%;
   background-color: #fff;
-}
-
-.left-flex img{
   position: absolute;
-  right: -17%;
-  top: 7%;
+  left: 111%; 
+  transform: translateX(-50%); 
+  top: 20px; 
+  z-index: 20;
 }
 
 .right-flex img{
-  position: absolute;
-  left: -15.5%;
-  top: 7%;
+  left: -11%;
 }
 
 
@@ -418,7 +416,7 @@ p.fade-in{
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid  #001219;
-  right: -15px;
+  right: -14px;
 }
 
 .right-container-arrow{
@@ -430,7 +428,7 @@ p.fade-in{
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid  #001219;
-  left: -15px;
+  left: -14px;
 }
 
 @media screen and (max-width: 600px){
@@ -541,8 +539,16 @@ p.fade-in{
 /* Projects Section */
 .projects-section {
     padding: 50px 20px;
-    background-color: #111;
+    background-color:#fff;
     color: #fff;
+}
+
+.projects-section h2 {
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #EE9B00;
 }
 
 .projects-container {
@@ -571,15 +577,19 @@ p.fade-in{
     font-size: 15rem;
     color: transparent;
     font-family: 'Oswald', sans-serif;
-    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 3px rgba(0, 95, 115, 0.5);
     flex-shrink: 0;
     width: 89px;
     height: 300px;
     text-align: center;
 }
 
+.special{
+  width: 89px;
+}
+
 .project-card {
-    background: #222;
+    background: #001219;
     padding: 15px;
     border-radius: 10px;
     width: 250px;
@@ -587,6 +597,7 @@ p.fade-in{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-family: "montserrat";
 }
 
 .project-card img {
@@ -608,8 +619,9 @@ p.fade-in{
 /* Skills Section */
 .skills-section {
   text-align: center;
+  font-family: "montserrat";
   padding: 60px 0;
-  background: #111;
+  background: #001219;
   color: white;
 }
 
@@ -623,11 +635,11 @@ p.fade-in{
 
 .skill-item {
   padding: 20px;
-  background: #222;
+  background: #005f73;
   border-radius: 10px;
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   cursor: pointer;
@@ -687,6 +699,7 @@ p.fade-in{
   text-align: left;
   min-width: 300px;
   max-width: 400px;
+  line-height: 20px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }

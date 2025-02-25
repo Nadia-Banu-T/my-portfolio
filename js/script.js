@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(glitchInterval);
             textElement.textContent = title;
             textElement.style.color = colors[index % colors.length]; // Apply neon color
-            textElement.style.textShadow = `0 0 2px ${colors[index % colors.length]}, 0 0 2px ${colors[index % colors.length]}`;
+            textElement.style.textShadow = `0 0 5px ${colors[index % colors.length]}, 0 0 10px ${colors[index % colors.length]}`;
             
             setTimeout(() => {
                 index = (index + 1) % titles.length;
