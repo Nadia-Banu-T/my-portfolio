@@ -33,7 +33,7 @@
 }
 
 .logo span {
-  color: rgb(239, 38, 38);
+  color: #9a8c98;
 }
 
 .menu-toggle {
@@ -51,14 +51,14 @@
 .nav-links a {
   text-decoration: none;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
   color: #ddd;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: #fff8b3;
+  color: #4a4e69;
 }
 
 @media (max-width: 950px) {
@@ -213,13 +213,14 @@
 .about-section h2 {
   font-weight: 700;
   font-family: "montserrat";
-  color: #9a8c98;
+  color: #22223b;
 }
 
 .about-section p {
   font-family: "montserrat";
-  color: #22223b;
+  color: #4a4e69;
   padding-top: 20px;
+  font-weight: 400;
 }
 
 /* Animation for smooth appearance */
@@ -248,10 +249,12 @@
 
 .stat-item h3 {
   font-size: 2.5rem;
-  color: #EE9B00;
+  color: #e88873;
   font-weight: bold;
 }
-
+.stat-item p{
+  font-weight: 700;
+}
 .semi-circle {
   width: 150px;
   height: 75px;
@@ -271,7 +274,7 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #EE9B00;
+  color: #22223b;
 }
 
 .container h2{
@@ -286,7 +289,7 @@
 }
 
 .container h3{
-  color:#E9D8A6;
+  color:#c9ada7;
   font-weight: 500;
 }
 
@@ -309,7 +312,7 @@
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #ee9b00;
+  background: #decbc6;
   left: 50%;
   transform: translateX(-50%);
   top: 0;
@@ -374,7 +377,7 @@
 .text-box{
   padding: 20px 30px;
   font-family: "montserrat";
-  background:  #001219;
+  background:  #4a4e69;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -410,7 +413,7 @@
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid  #001219;
+  border-left: 15px solid  #4a4e69;
   right: -14px;
 }
 
@@ -422,23 +425,26 @@
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid  #001219;
+  border-right: 15px solid  #4a4e69;
   left: -14px;
 }
 
-@media screen and (max-width: 600px){
+@media (max-width: 950px){
 
   .timeline{
     margin: 50px auto;
   }
   .timeline ::after{
-    left:31px;  
+    left:3%;  
+    
   }
   .container{
     width: 100%;
     padding: 0px 50px 0px;
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .text-box{
     font-size: 13px;
@@ -446,19 +452,21 @@
   .text-box small{
     margin-bottom: 10px;
   }
-  .left-container{
+  .left-flex{
     right: 0;
   }
-  .right-container{
+  .right-flex{
     left: 0;
   }
-  .left-container img, .right-container img{
-    left: 10px;
+  .left-flex img, .right-flex img{
+    left: -35px;
+    top: 23px;
   }
+  
   .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid #001219;
+    border-right: 15px solid #4a4e69;
     border-left: 0;
-    left: 15px;
+    left: -14px;
   }
 }
 
@@ -496,6 +504,8 @@
 
 /* Centered Education Box with Glassmorphism */
 .education-content {
+  display: flex;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.15); /* Light white transparency */
   backdrop-filter: blur(10px); /* Frosted glass effect */
   padding: 2rem;
@@ -503,10 +513,17 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: #ffffff;
-  width: 50%;
+  width: 70vw;
   animation: fadeIn 1s ease-in-out;
 }
 
+.education-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: #b29da0;
+}
 /* Animating fade-in effect */
 @keyframes fadeIn {
   from {
@@ -530,6 +547,7 @@
   font-size: 1.2rem;
   margin: 10px 0;
 }
+
 
 /* Projects Section */
 .projects-section {
@@ -686,13 +704,14 @@
 }
 .testimonial-card {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   background: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   font-size: 11px;
-  font-family: "Kalam", seirf;
   text-align: left;
   min-width: 270px;
   max-width: 300px;
@@ -704,6 +723,17 @@
   transform: scale(1.1);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.details{
+  display: flex;
+  flex-direction: row;
+}
+
+.designation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .profile-pic {
   width: 50px;
   height: 50px;
@@ -712,7 +742,11 @@
 }
 .testimonial-content {
   display: flex;
-  flex-direction: column;
+  
+}
+.testimonial-content p{
+  font-family: "Kalam", seirf;
+  display: flex;
 }
 .name {
   font-weight: bold;

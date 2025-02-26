@@ -13,7 +13,7 @@
         <div class="logo">NADIA<span>.</span></div>
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
         <nav class="nav-links">
-            <a href="#home" class="active">Home</a>
+            <a href="#hero" class="active">Home</a>
             <a href="#about">About Me</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
@@ -136,13 +136,17 @@
     <section id="education" class="education-section">          
             <img src="assets/graduation.gif" class="bg-video"">
             <div class="overlay"></div>
-            <div class="education-content">
-                <h2 class="text-center">Education</h2>
-                <ul class="education-list">
-                    <li><strong>B.Tech in Computer Science</strong> - SRKR Engineering College (2019 - 2023) - CGPA: 8.35</li>
-                    <li><strong>Intermediate</strong> - Aditya Junior College (2017 - 2019) - CGPA: 9.61</li>
-                    <li><strong>SSC</strong> - Aditya E.M High School (2017) - CGPA: 10.0</li>
-                </ul>
+            <div >
+                <div class="education-title">
+                    <h2 class="text-center">Education</h2>
+                </div>
+                <div class="education-content">
+                    <ul class="education-list">
+                        <li><strong>B.Tech in Computer Science</strong> - SRKR Engineering College (2019 - 2023) - CGPA: 8.35</li>
+                        <li><strong>Intermediate</strong> - Aditya Junior College (2017 - 2019) - CGPA: 9.61</li>
+                        <li><strong>SSC</strong> - Aditya E.M High School (2017) - CGPA: 10.0</li>
+                    </ul>
+                </div>                
             </div>
     </section>
     <section id="projects" class="projects-section">
@@ -324,12 +328,20 @@
         <h2 class="section-title">This is what my colleagues say about me 💙</h2>
         <div class="testimonial-wrapper">
             <div class="testimonial-card" onclick="setActive(this)">
-                <img src="profile1.jpg" alt="John" class="profile-pic">
                 <div class="testimonial-content">
-                    <p>"Nadia is an incredible problem solver!"</p>
-                    <span class="name">John Doe</span>
-                    <span class="title">Software Engineer at ABC Corp</span>
+                    <p>During her internship tenure, I witnessed Nadia's strengths. She is good at doing research and documentation. She has good communication skills and never hesitates to
+                        keep her suggestions forward. She has the patience to work on the minute details of any project. It was a great experience working with a teammate like her.</p>
                 </div>
+                <div class="details">
+                    <div class="profile-pic"> 
+                        <img src="assets/anshika.jpg" alt="Anshika" class="profile-pic">
+                    </div>
+                    <div class="designation">
+                        <span class="name">Anshika Jain</span>
+                        <span class="title">Data Engineer at Amazon</span>
+                    </div>
+                </div>
+                        
             </div>
             <div class="testimonial-card active" onclick="setActive(this)">         
                 <div class="testimonial-content">
@@ -340,13 +352,13 @@
                         For all she has taken the right time as was required to deliver the tasks with quality and expectations.
 
                         Nadia is great to work with, a valuable addition to team actively taking part in discussions, brings her honest self to work and hardworking .</p>
-                    <img src="profile2.jpg" alt="Sarah" class="profile-pic">
-                    <span class="name">Sarah Smith</span>
-                    <span class="title">Project Manager at XYZ Ltd</span>
+                    <img src="profile2.jpg" alt="Atul" class="profile-pic">
+                    <span class="name">Atul Saurabh</span>
+                    <span class="title">DevOps Manager at Amazon</span>
                 </div>
             </div>
             <div class="testimonial-card" onclick="setActive(this)">
-                <img src="profile3.jpg" alt="Alex" class="profile-pic">
+                <img src="profile3.jpg" alt="Anshika" class="profile-pic">
                 <div class="testimonial-content">
                     <p>During her internship at Amazon, Nadia displayed remarkable qualities that made her a standout team member.
                         She was highly motivated, consistently approaching her work with enthusiasm and dedication.
@@ -354,8 +366,8 @@
                         She understood business requirements, fostering collaborative team environment.
                         Her analytical mindset allowed her to identify root causes and implement solutions. 
                         Her attention to detail was impressive and valuable to our projects.</p>
-                    <span class="name">Alex Johnson</span>
-                    <span class="title">DevOps Engineer at LMN Inc</span>
+                    <span class="name">Mahak Gupta</span>
+                    <span class="title">Software Engineer at Amazon</span>
                 </div>
             </div>
         </div>
