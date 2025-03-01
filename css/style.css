@@ -673,6 +673,25 @@
   transform: rotate(10deg) scale(1.2);
 }
 
+@media (max-width: 950px){
+  .skills-section {
+    padding: 60px 30px;
+  }
+
+  .skill-item:hover {
+    background: #e49b8b;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffcc00;
+  }
+  
+  .skill-item:hover img {
+    transform: rotate(10deg) scale(1.2);
+  }
+  
+}
+
+
 /* Main container */
 .testimonial-container {
   text-align: center;
