@@ -429,48 +429,39 @@
   left: -14px;
 }
 
-@media (max-width: 950px){
+@media (max-width: 950px) {
+  .experience-section{
+    padding: 30px;
+  }
+  .timeline::after {
+      left: 7%;  
+  }
 
-  .timeline{
-    margin: 50px auto;
+  .container {
+      width: 100%;
+      padding: 10px;
+      margin-left: 15%; 
   }
-  .timeline ::after{
-    left:3%;  
-    
+  .text-box {
+      font-size: 14px;
   }
-  .container{
-    width: 100%;
-    padding: 0px 50px 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+  .left-flex, .right-flex {
+      justify-content: flex-start; 
   }
-  .text-box{
-    font-size: 13px;
+
+  .container img {
+      position: absolute;
+      left: -13%;
+      top: 23px;
   }
-  .text-box small{
-    margin-bottom: 10px;
-  }
-  .left-flex{
-    right: 0;
-  }
-  .right-flex{
-    left: 0;
-  }
-  .left-flex img, .right-flex img{
-    left: -35px;
-    top: 23px;
-  }
-  
-  .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid #4a4e69;
-    border-left: 0;
-    left: -14px;
+  .left-container-arrow, .right-container-arrow {
+      border-left: 0;
+      border-right: 15px solid #4a4e69;
+      left: -14px;
   }
 }
 
-/* Ensuring full-screen background video */
 .education-section {
   position: relative;
   height: 100vh;
@@ -480,7 +471,6 @@
   overflow: hidden;
 }
 
-/* Background video full coverage */
 .bg-video {
   position: absolute;
   top: 0;
@@ -491,7 +481,6 @@
   z-index: -2;
 }
 
-/* Dark overlay for better readability */
 .overlay {
   position: absolute;
   top: 0;
@@ -502,12 +491,11 @@
   z-index: -1;
 }
 
-/* Centered Education Box with Glassmorphism */
 .education-content {
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.15); /* Light white transparency */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(10px); 
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -561,7 +549,7 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #EE9B00;
+  color: #4a4e69;
 }
 
 .projects-container {
@@ -634,8 +622,8 @@
   text-align: center;
   font-family: "montserrat";
   padding: 60px 0;
-  background: #001219;
-  color: white;
+  background: #f2e9e4;
+  color: #22223b;
 }
 
 .skills-grid {
@@ -648,7 +636,7 @@
 
 .skill-item {
   padding: 20px;
-  background: #005f73;
+  background: white;
   border-radius: 10px;
   text-align: center;
   font-size: 15px;
@@ -675,7 +663,7 @@
 }
 
 .skill-item:hover {
-  background: #ffcc00;
+  background: #e49b8b;
   color: black;
   transform: scale(1.1);
   box-shadow: 0 0 20px #ffcc00;
@@ -685,112 +673,230 @@
   transform: rotate(10deg) scale(1.2);
 }
 
-/*Wall-of-Love*/
+/* Main container */
 .testimonial-container {
   text-align: center;
-  padding: 50px 20px;
-  box-sizing: border-box;
-  background: #f5f5f5;
-}
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-.testimonial-wrapper {
+  padding: 80px 20px 40px 20px;
+  overflow: hidden;
+  position: relative;
+  background: #f9f9f9;
+  min-height: 650px; 
   display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.testimonial-card {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-size: 11px;
-  text-align: left;
-  min-width: 270px;
-  max-width: 300px;
-  line-height: 16px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.testimonial-card.active {
-  transform: scale(1.1);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.details{
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px; 
+}
+
+.testimonial-wrapper {
   display: flex;
-  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
+.testimonial-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+.testimonial-card {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  flex: 0 0 600px;
+  min-height: 400px;
+  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}.testimonial-content p{
+  font-family: "kalam", serif;
+}
+/* Profile section */
+.details {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
 .designation{
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-.profile-pic {
-  width: 50px;
-  height: 50px;
+
+.profile-pic img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin-right: 15px;
 }
-.testimonial-content {
-  display: flex;
-  
-}
-.testimonial-content p{
-  font-family: "Kalam", seirf;
-  display: flex;
-}
+
 .name {
   font-weight: bold;
-  color: #0077b5;
-}
-.title {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 20px;
 }
 
-/* Contact */
+.title {
+  font-size: 16px;
+  color: gray;
+}
+
+.testimonial-wrapper:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonial-container {
+      min-height: 600px;
+  }
+  .testimonial-card {
+      flex: 0 0 450px;
+      min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+      min-height: 550px;
+  }
+  .testimonial-card {
+      flex: 0 0 350px;
+      min-height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-container {
+      min-height: 500px;
+  }
+  .testimonial-card {
+      flex: 0 0 300px;
+      min-height: 240px;
+  }
+}
+/* Contact Section */
 .contact-section {
-        text-align: center;
-        padding: 50px 20px;
-        background: #f5f5f5;
-    }
-    .contact-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        max-width: 900px;
-        margin: auto;
-    }
-    .form-container {
-        flex: 1;
-        min-width: 400px;
-    }
-    .contact-links {
-        flex: 1;
-        text-align: left;
-    }
-    .contact-links h3 {
-        margin-bottom: 15px;
-        color: #333;
-    }
-    .linkedin-link, .email-link {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        color: #0077b5;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .linkedin-link:hover, .email-link:hover {
-        text-decoration: underline;
-    }
+  text-align: center;
+  padding: 80px 20px;
+  background: #4a4e69;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section-title {
+  color: #f2e9e4;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.form-container {
+  flex: 1;
+  min-width: 400px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-links {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-links h3 {
+  margin-bottom: 15px;
+  color: #f2e9e4;
+  font-size: 1.5rem;
+}
+
+.linkedin-link, .email-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  color: #e88873;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Icons for Links */
+.linkedin-link::before {
+  content: "🔗";
+  font-size: 1.5rem;
+}
+
+.email-link::before {
+  content: "📧";
+  font-size: 1.5rem;
+}
+
+.linkedin-link:hover, .email-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+      gap: 30px;
+  }
+  .form-container {
+      min-width: 100%;
+  }
+  .linkedin-link, .email-link {
+      font-size: 1.2rem;
+  }
+}
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #f2e9e4;
+  color: #3a3d5a;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 50px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-section {
+  margin-bottom: 0; 
+  padding-bottom: 40px; 
+}
+
+.footer {
+  margin-top: 0; 
+}
