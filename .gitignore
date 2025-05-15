@@ -1,0 +1,14 @@
+# Ignore assets
+# Ignore everything inside assets
+assets/*
+
+# But keep the folder structure
+!assets/
+!assets/images/
+!assets/styles/
+!assets/scripts/
+
+# Keep placeholder files to preserve folders
+!assets/images/.keep
+!assets/styles/.keep
+!assets/scripts/.keep
