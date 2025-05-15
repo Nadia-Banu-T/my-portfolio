@@ -7,13 +7,13 @@
 
 Welcome to my **personal portfolio website**, designed and built from scratch with **HTML**, **CSS**, and **JavaScript** — no frameworks, just clean handcrafted code. Inspired by **Apple**, **CRED**, and **Netflix**, this site reflects my creative tech journey and professional vibe ✨
 
-> 📍 Live: [nadia-banu.netlify.app](https://nadiabanu.netlify.app)
+> 📍 Live: [nadia-banu.netlify.app](https://nadiabanut.netlify.app/)
 
 ---
 
 ## 📸 Preview
 
-![Portfolio Screenshot](/assets/portfolio-preview.png)
+![Portfolio Screenshot](/portfolio-preview.png)
 
 ---
 
